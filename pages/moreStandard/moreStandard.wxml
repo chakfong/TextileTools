@@ -1,0 +1,41 @@
+<!--pages/moreStandard/moreStandard.wxml-->
+<view class="container">
+
+  <view class='ps'>
+    <view class='row'>
+      <view class='label-name'>
+        名称
+      </view>
+      <view class='label'>
+        长(cm)
+      </view>
+      <view class='label'>
+        宽(cm)
+      </view>
+      <view class='label'>
+        重(g)
+      </view>
+    </view>
+    <view wx:for='{{paperStandard}}' wx:key="*this">
+      <view class='row' wx:if="{{item}}" data-id="{{item.id}}" catchlongpress='deletePaperStandard'>
+        <view class='label-name'>
+          <input type="text" placeholder="待输入" maxlength='6' bindblur="nameInput" data-id="{{item.id}}" bindconfirm="nameConfirm" value="{{item.name}}" />
+        </view>
+        <view class='label'>
+          <input type="digit" placeholder="待输入" maxlength='6' bindblur="heightInput" data-id="{{item.id}}" value="{{item.height}}" />
+
+        </view>
+        <view class='label'>
+          <input type="digit" placeholder="待输入" maxlength='6' bindblur="widthInput" data-id="{{item.id}}" value="{{item.width}}" />
+        </view>
+        <view class='label'>
+          <input type="digit" placeholder="待输入" maxlength='6' bindblur="weightInput" data-id="{{item.id}}" value="{{item.weight}}" />
+        </view>
+      </view>
+    </view>
+		
+    <view class='vimg'>
+			<image  catchtap='addStandard' class='img'src="/images/icon/wx_app_add.png"/>
+    </view>
+  </view>
+</view>

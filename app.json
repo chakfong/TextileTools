@@ -1,12 +1,12 @@
 {
-  "pages":[
-    "pages/index/index",
-    "pages/logs/logs"
-  ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "纺织一点通",
-    "navigationBarTextStyle":"black"
-  }
+	"pages": [
+		"pages/index/index",
+		"pages/moreStandard/moreStandard"
+	],
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#fff",
+		"navigationBarTitleText": "纺织一点通",
+		"navigationBarTextStyle": "black"
+	}
 }

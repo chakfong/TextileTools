@@ -1,38 +1,43 @@
 /**index.wxss**/
+page{
+	height:100%;
+	width:100%
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center;
+  justify-content: space-between; */
+  padding: 200rpx 0rpx 0rpx 100rpx;
+  box-sizing: border-box;
+} 
+swiper{
+	height:100%
+}
 .row{
 	display:flex;
 	flex-direction: row;
 	align-items:center;
-	margin-left: 20rpx;
+	margin-left: 0rpx;
 	margin-top: 100rpx
 }
 input{
-	width:200rpx;
+	width:275rpx;
 }
 .label{
-	margin: 0rpx 30rpx;
+	width:275rpx;
+	margin: 0rpx 0rpx;
 }
-
-
-
-/*
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.iconImg{
+	/* margin:0rpx 30rpx; */
+	margin-left: 30rpx;
+	width:70rpx;
+	height:70rpx
 }
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.picker{
+	width:500rpx;
 }
-
-.userinfo-nickname {
-  color: #aaa;
+.info{
+	width:200rpx;
 }
-
-.usermotto {
-  margin-top: 200px;
-} */

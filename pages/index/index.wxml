@@ -1,27 +1,37 @@
 <!--index.wxml-->
 <view class="container">
-  <!-- <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view> -->
   <view class='row'>
-	<text class='label'>布重(mg)：</text>
-    <view class='input'>
-      <input type="text" placeholder="输入布重" maxlength='5' placeholder-class="placeholder" focus="{{focusCloth}}" bindinput="onBindClothInput" bindconfirm="onBindClothConfirm" value="{{clothValue}}" />
+    <picker bindchange="bindPickerChange" value="{{paperStandard[checkId].name}}" range-key="{{'name'}}" range="{{paperStandard}}">
+      <view class="picker">
+        <text class="label">纸张标准：</text>
+        <text class="label">{{paperStandard[checkId].name}}</text>
+      </view>
+    </picker>
+    <image class='iconImg' src='/images/icon/wx_app_add.png' catchtap="moreStandard"></image>
+  </view>
+  <view class='row'>
+    <view class='info'>
+		长：{{paperStandard[checkId].height?paperStandard[checkId].height:0}}
+		</view>
+    <view class='info'>
+      宽：{{paperStandard[checkId].width?paperStandard[checkId].width:0}}
+    </view>
+    <view class='info'>
+      重: {{paperStandard[checkId].weight?paperStandard[checkId].weight:0}}
     </view>
   </view>
   <view class='row'>
-		<text class='label'>纸重(mg)：</text>
-    <input type="text" placeholder="输入纸重" maxlength='5'  placeholder-class="placeholder" focus="{{focusPaper}}" bindinput="onBindPaperInput" bindconfirm="onBindPaperConfirm" value="{{paperValue}}" />
+    <text class='label'>布重(mg)：</text>
+    <view class='input'>
+      <input type="digit" placeholder="输入布重" maxlength='5' placeholder-class="placeholder" focus="{{focusCloth}}" bindinput="onBindClothInput" bindconfirm="onBindClothConfirm" value="{{clothValue}}" />
+    </view>
   </view>
-	<view class='row'>
-	<text class='label'>克布重(g/㎡)：</text>
-	<text>{{result}}</text>
-	</view>
+  <view class='row'>
+    <text class='label'>纸重(mg)：</text>
+    <input type="digit" placeholder="输入纸重" maxlength='5' placeholder-class="placeholder" focus="{{focusPaper}}" bindinput="onBindPaperInput" bindconfirm="onBindPaperConfirm" value="{{paperValue}}" />
+  </view>
+  <view class='row'>
+    <text class='label'>克布重(g/㎡)：</text>
+    <text>{{result?result:0}}</text>
+  </view>
 </view>

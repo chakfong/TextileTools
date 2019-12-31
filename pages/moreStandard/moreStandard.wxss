@@ -1,0 +1,42 @@
+page {
+  height: 100%;
+}
+
+.container {
+  padding: 0rpx 0rpx 0rpx 75rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ps {
+  /* border:1rpx solid black; */
+  overflow: auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 0rpx;
+  margin-top: 50rpx;
+}
+
+.label {
+  width: 140rpx;
+  margin: 0rpx 0rpx;
+}
+
+.label-name {
+  width: 260rpx;
+}
+
+/* .vimg{
+	display: flex;
+  justify-content: center;
+} */
+.img {
+  height: 100rpx;
+  width: 100rpx;
+	margin:80rpx 250rpx;
+}
